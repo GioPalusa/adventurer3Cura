@@ -1,0 +1,33 @@
+{
+    "name": "FlashForge Adventurer 3",
+    "version": 2,
+    "inherits": "fdmprinter",
+    "metadata": {
+        "visible": true,
+        "author": "palusa.se",
+        "manufacturer": "FlashForge",
+        "platform": "FlashForge_CreatorPro.stl",
+        "machine_x3g_variant": "fcp",
+        "file_formats": "application/x3g",
+        "platform_offset": [ 0, 0, 0],
+        "machine_extruder_trains":
+        {
+            "0": "flashforgeadventurer3"
+        }
+    },
+
+    "overrides": {
+        "infill_sparse_density": { "default_value": 15 },
+        "machine_extruder_count": { "default_value": 1 },
+        "machine_heated_bed": { "default_value": true },
+        "machine_center_is_zero": { "default_value": true },
+        "machine_height": { "default_value": 150 },
+        "machine_gcode_flavor": { "default_value": "Makerbot" },
+        "machine_depth": { "default_value": 150 },
+        "machine_width": { "default_value": 150 },
+        "machine_name": { "default_value": "flashforge Adventurer 3" },
+        "relative_extrusion": { "default_value": true, "value": true },
+        "machine_start_gcode": {"default_value": "; **** FlashForge Adventurer 3 PRINTER start.gcode ****\nM83 ; relative extrusion mode\nM73 P0 ; enable build progress\nG162 X Y F3000 ; home XY maximum\nG161 Z F1200 ; home Z minimum\nG92 Z-5 ; set Z to -5\nG1 Z0 ; move Z to 0\nG161 Z F100 ; home Z slowly\nM132 X Y Z A B ; recall home offsets\nM135 T0 ; load right extruder offsets\nG1 X-110 Y-70 Z30 F9000 ; move to wait position left hand side of the table\nG130 X20 Y20 Z20 A20 B20 ; lower stepper Vrefs while heating\nM127; disable fan\nM140 S{material_bed_temperature} T0 ; set bed temperature\nM134 T0 ; stabilize bed temperature\nM104 S{material_print_temperature_layer_0} T1 ; set left extruder temperature\nM133 T1 ; stabilize left extruder temperature\nG130 X127 Y127 Z40 A127 B127 ; default stepper Vrefs\nG92 A0 B0 ; zero extruders\nG1 Z0.4 ; position nozzle\nM135 T1 ; left tool\nG1 X-140 Y-70 F9000 ; reposition nozzle\nG1 X-100 Y-70 E25 F300 ; purge nozzle\nG1 X-110 Y-70 Z0.15 F1200 ; slow wipe\nG1 X-100 Y-70 Z0.5 F1200 ; lift\nG92 A0 B0 ; zero extruders\nM73 P1 ;@body (notify GPX body has started)\n; **** end of start.gcode ****\n" },
+        "machine_end_gcode": {"default_value": "; **** FlashForge Adventurer 3 PRINTER end.gcode ****\nM73 P100 ; end build progress\nG1 Z150 F1000 ; send Z axis to bottom of machine\nM140 S0 T0 ; cool down HBP\nM104 S0 T0 ; cool down right extruder\nM104 S0 T1 ; cool down left extruder\nM127 ; stop blower fan\nG162 X Y F3000 ; home XY maximum\nM18 ; disable stepper\nM70 P3 ; We <3 Making Things!\nM72 P1 ; play Ta-Da song\n; **** end of end.gcode ****\n" }
+    }
+}
