@@ -25,7 +25,7 @@
         "machine_gcode_flavor": { "default_value": "Marlin" },
         "machine_depth": { "default_value": 150 },
         "machine_width": { "default_value": 150 },
-        "machine_name": { "default_value": "flashforge Adventurer 3" },
+        "machine_name": { "default_value": "FlashForge Adventurer 3" },
         "machine_start_gcode": {"default_value": "G90 ; absolute coordinates\nG28 ; home all axes\nM132 X Y Z A B ; recall home offsets\nG1 Z50 F3300 ; lower bed\nM7 T0 ; stabilize bed temperature\nM6 T0 ; stabilize extruder temperature\nM651 ; set case fan on\nM907 X100 Y100 Z40 A100 B20 ; set motor current\n" },
         "machine_end_gcode": {"default_value": "M107\nM104 S0 T0\nM140 S0\nG1 X0 Y0 F1200\nM84\n" }
     }
