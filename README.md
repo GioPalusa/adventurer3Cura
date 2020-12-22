@@ -1,4 +1,4 @@
-# Cura settings for Flashforge Adventurer 3
+# Cura settings for FlashForge Adventurer 3
 
 Installation Instructions
 
@@ -16,3 +16,7 @@ The files must be extracted/added into the same folder names (definitions & extr
 Launch Cura and add the printer(s) by selecting from the menu "Preferences ==> Configure Cura... ==> Printers ==> Add ==> Add a non-networked printer" - scroll down to "Flashforge" and expand it.
 
 Happy slicing!
+
+# See Also
+
+* NOTE: The [Monoprice Voxel 3D](https://www.monoprice.com/product?p_id=33820) printer is a rebranded FlashForge Adventurer 3.
