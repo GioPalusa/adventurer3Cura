@@ -9,24 +9,22 @@
         "platform": "FlashForge_CreatorPro.stl",
         "machine_x3g_variant": "fcp",
         "file_formats": "application/x3g",
-        "platform_offset": [ 0, 0, 0],
-        "machine_extruder_trains":
-        {
+        "platform_offset": [0, 0, 0],
+        "machine_extruder_trains": {
             "0": "flashforgeadventurer3"
         }
     },
-
     "overrides": {
         "infill_sparse_density": { "default_value": 15 },
         "machine_extruder_count": { "default_value": 1 },
         "machine_heated_bed": { "default_value": true },
         "machine_center_is_zero": { "default_value": true },
         "machine_height": { "default_value": 150 },
-        "machine_gcode_flavor": { "default_value": "Marlin" },
-        "machine_depth": { "default_value": 150 },
+        "machine_gcode_flavor": {  "default_value": "Marlin" },
+        "machine_depth": { "default_value": 150  },
         "machine_width": { "default_value": 150 },
-        "machine_name": { "default_value": "flashforge Adventurer 3" },
-        "machine_start_gcode": {"default_value": "G90 ; absolute coordinates\nG28 ; home all axes\nM132 X Y Z A B ; recall home offsets\nG1 Z50 F3300 ; lower bed\nM7 T0 ; stabilize bed temperature\nM6 T0 ; stabilize extruder temperature\nM651 ; set case fan on\nM907 X100 Y100 Z40 A100 B20 ; set motor current\n" },
-        "machine_end_gcode": {"default_value": "M107\nM104 S0 T0\nM140 S0\nG1 X0 Y0 F1200\nM84\n" }
+        "machine_name": {"default_value": "flashforge Adventurer 3" },
+        "machine_start_gcode": { "default_value": "G28\nM132 X Y Z A B\nG1 Z50.000 F420\nG161 X Y F3300\nM7 T0\nM6 T0\nM651 S255\n" },
+        "machine_end_gcode": { "default_value": "M104 S0 T0\nM140 S0 T0\nG162 Z F1800\nG28 X Y\nM132 X Y A B\nM652\nG91\nM18\n" }
     }
 }
