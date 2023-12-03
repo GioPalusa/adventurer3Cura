@@ -35,22 +35,22 @@ On the pop-up window please find Flashforge in the left list then fill in your P
 On the Machine Settings window fill in the Printer spec as suggested below. Then click Next to proceed. 
 
 #### Printer Setting 
-- X (Width) 150.0
-- Y (Depth) 150.0
-- Z (Height) 150.0
-- Build plate shape: Rectangular 
-- Original at Center √
-- Hotend bed √
-- G-code flavor Marlin 
+- X (Width) `150.0`
+- Y (Depth) `150.0`
+- Z (Height) `150.0`
+- Build plate shape: `Rectangular` 
+- Original at Center `√`
+- Hotend bed `√`
+- G-code flavor `Marlin` 
 
 #### Printhead Setting 
-- X min -20 
-- Y min -10 
-- X max 10 
-- Y max 10 
-- Gantry Height 150.0
-- Number of Extruders 1
-- Apply Extruder Offsets to GCode √
+- X min `-20` 
+- Y min `-10` 
+- X max `10` 
+- Y max `10` 
+- Gantry Height `150.0`
+- Number of Extruders `1`
+- Apply Extruder Offsets to GCode `√`
 
 #### Start G-code:
 ````
@@ -76,10 +76,10 @@ M18
 ````
 
 #### Nozzle Settings 
-- Compatible material diameter 1.75 
-- Nozzle offset X 0.0
-- Nozzle offset Y 0.0
-- Cooling fan number 0
+- Compatible material diameter `1.75` 
+- Nozzle offset X `0.0`
+- Nozzle offset Y `0.0`
+- Cooling fan number `0`
 
 ## Step 3: Select Nozzle Size 
 Once the printer is added you may go to Settings -> Extruder 1 -> Nozzle Size to select your printer’s nozzle size as 0.4mm. 
